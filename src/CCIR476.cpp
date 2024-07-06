@@ -90,7 +90,7 @@ uint8_t CCIR476::Encode(char c)
         	case '7': { CCIR_MODE = 0; return 0x4E; }
         	case '8': { CCIR_MODE = 0; return 0x4D; }
         	case '9': { CCIR_MODE = 0; return 0x71; }                 
-        	case '\'': { CCIR_MODE = 0; return 0x17; }      
+        	case '\'': { CCIR_MODE = 0; return 0x4B; }      
         	case '!': { CCIR_MODE = 0; return 0x1B; }
         	case ':': { CCIR_MODE = 0; return 0x1D; }
         	case '(': { CCIR_MODE = 0; return 0x1E; }
@@ -169,7 +169,7 @@ char CCIR476::Decode(uint8_t CCIR, bool Mode)
           case 0x4E: { return '7'; }
           case 0x4D: { return '8'; }
           case 0x71: { return '9'; }                 
-          case 0x17: { return '\''; }      
+          case 0x4B: { return '\''; }      
           case 0x1B: { return '!'; }
           case 0x1D: { return ':'; }
           case 0x1E: { return '('; }
